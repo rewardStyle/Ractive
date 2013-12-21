@@ -117,7 +117,8 @@ define([
 		instance = this.instance = new Component({
 			el: parentFragment.pNode.cloneNode( false ), // to ensure correct namespaceURI
 			data: data,
-			partials: partials
+			partials: partials,
+			adaptors: parentFragment.root.adaptors || {}
 		});
 
 		// Need this to find the first node *after* the component

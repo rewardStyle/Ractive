@@ -1,6 +1,6 @@
 /*
 	
-	Ractive - v0.3.8 - 2013-12-20
+	Ractive - v0.3.8 - 2013-12-21
 	==============================================================
 
 	Next-generation DOM manipulation - http://ractivejs.org
@@ -7834,7 +7834,8 @@ var render_DomFragment_Component__Component = function (types, warn, parseJSON, 
             instance = this.instance = new Component({
                 el: parentFragment.pNode.cloneNode(false),
                 data: data,
-                partials: partials
+                partials: partials,
+                adaptors: parentFragment.root.adaptors || {}
             });
             instance.component = this;
             while (instance.el.firstChild) {
